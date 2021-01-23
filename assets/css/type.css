@@ -1,0 +1,96 @@
+/* ------------------------------------ *\
+  #Typography
+\* ------------------------------------ */
+
+/**
+ * Headings.
+ */
+h1,
+.t-h1,
+h2,
+.t-h2,
+h3,
+.t-h3,
+h4,
+.t-h4,
+h5,
+.t-h5,
+h6,
+.t-h6 {
+  @apply font-serif font-bold mb-base-24;
+}
+
+h1,
+.t-h1 {
+  @apply text-h1-sm;
+
+  @screen sm {
+    @apply text-h1-lg;
+  }
+}
+
+h2,
+.t-h2 {
+  @apply text-h2-sm;
+
+  @screen sm {
+    @apply text-h2-lg;
+  }
+}
+
+h3,
+.t-h3 {
+  @apply text-h3-sm;
+
+  font-weight: 100;
+
+  @screen sm {
+    @apply text-h3-lg;
+  }
+}
+
+h4,
+.t-h4 {
+  @apply text-h4-sm;
+
+  font-weight: 100;
+
+  @screen sm {
+    @apply text-h4-lg;
+  }
+}
+
+h5,
+.t-h5 {
+  @apply text-h5-sm;
+
+  font-weight: 100;
+
+  @screen sm {
+    @apply text-h5-lg;
+  }
+}
+
+h6,
+.t-h6 {
+  @apply text-h6-sm;
+
+  font-weight: 100;
+
+  @screen sm {
+    @apply text-h6-lg;
+  }
+}
+
+p,
+li,
+.t-para {
+  @apply font-sans normal-case text-base-sm mb-base-18;
+
+  font-weight: 100;
+  max-width: calc(600 / 16 * 1em);
+
+  @screen sm {
+    @apply text-base-lg;
+  }
+}

@@ -1,0 +1,57 @@
+/* ------------------------------------ *\
+  #General resets
+\* ------------------------------------ */
+
+*,
+::before,
+::after {
+  border-color: transparent;
+}
+
+/**
+ * Inputs & Buttons.
+ */
+
+input,
+select,
+button,
+textarea {
+  letter-spacing: inherit;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  user-select: none;
+}
+
+input {
+  appearance: none;
+}
+
+/**
+ * Svgs.
+ */
+
+svg {
+  display: block;
+  width: inherit;
+  height: inherit;
+  fill: currentColor;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
+li {
+  font-weight: 100;
+}
+
+.t-link {
+  text-decoration: underline;
+}

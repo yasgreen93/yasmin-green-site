@@ -1,0 +1,23 @@
+/* ------------------------------------ *\
+  #Page
+\* ------------------------------------ */
+
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+
+html {
+  @apply h-screen;
+
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-rendering: optimizeLegibility;
+}
+
+body,
+main {
+  @apply font-sans h-screen bg-offwhite text-darkGrey;
+}

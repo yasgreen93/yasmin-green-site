@@ -1,0 +1,26 @@
+/* ------------------------------------ *\
+  #Layout classes
+\* ------------------------------------ */
+
+/**
+ * Horizontal wrapper class
+ */
+
+.wrapper {
+  @apply max-w-screen-base mx-auto;
+
+  padding-right: var(--base-outer-gutter);
+  padding-left: var(--base-outer-gutter);
+}
+
+/**
+ * Vertical rhythm block class
+ */
+
+.section {
+  @apply py-base-36;
+
+  @screen sm {
+    @apply py-base-60;
+  }
+}

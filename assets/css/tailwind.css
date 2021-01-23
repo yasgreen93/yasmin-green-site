@@ -1,0 +1,47 @@
+@import 'tailwindcss/base';
+@import 'assets/css/resets.css';
+@import 'assets/css/page.css';
+@import 'assets/css/type.css';
+@import 'assets/css/layout.css';
+@import 'assets/css/transitions.css';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/**
+ * Global Variables
+ */
+:root {
+  /* Units */
+  --unit-screen-size: 1440;
+  --unit-outer-gutter: 72;
+  --unit-column-total: 24;
+  --unit-column: 54;
+
+  /* Structural */
+  --base-column: 54px;
+  --base-outer-gutter-percentage: calc(var(--unit-outer-gutter) / var(--unit-screen-size) * 100%);
+  --base-outer-gutter: theme('spacing.base-24');
+
+  /* Header */
+  --base-header-height: 62px;
+  --base-header-height-full: 132px;
+}
+
+@screen sm {
+  :root {
+    /* Header */
+    --base-header-height: 90px;
+    --base-header-height-full: 146px;
+
+    /* Structural */
+    --base-outer-gutter: var(--base-outer-gutter-percentage);
+  }
+}
+
+@screen xl {
+  :root {
+    /* Structural */
+    --base-outer-gutter: theme('spacing.base-90');
+  }
+}
+
