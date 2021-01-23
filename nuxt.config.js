@@ -17,8 +17,8 @@ export default {
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
-      { property: 'og:image', content: '/profile-pic.jpg' },
-      { property: 'og:image:type', content: 'image/jpeg' },
+      { property: 'og:image', content: '/android-chrome-512x512.png' },
+      { property: 'og:image:type', content: 'image/png' },
       { property: 'og:image:width', content: '400' },
       { property: 'og:image:height', content: '400' },
       { property: 'og:url', content: title },
@@ -28,7 +28,7 @@ export default {
       { name: 'twitter:title', content: title },
       { name: 'twitter:site', content: '@yasgreen93' },
       { name: 'twitter:creator', content: '@yasgreen93' },
-      { name: 'twitter:image', content: '/profile-pic.jpg' },
+      { name: 'twitter:image', content: '/android-chrome-512x512.png' },
       { hid: 'description', name: 'description', content: description }
     ],
     link: [
