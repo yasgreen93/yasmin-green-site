@@ -1,9 +1,35 @@
 <template>
-  <section id="work" class="Work wrapper section">
+  <section
+    id="work"
+    class="Work wrapper section"
+  >
     <h2 class="t-h2 text-primary mb-base-48">
       Work
     </h2>
     <div class="Work__body">
+      <div class="mb-base-48">
+        <h3>
+          <a
+            href="https://studiorotate.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TextIconHover>
+              <template #text>
+                Rotate°
+              </template>
+              <template #icon>
+                <img
+                  class="logo"
+                  src="/rotate-logo.png"
+                  alt="Rotate"
+                >
+              </template>
+            </TextIconHover>
+          </a> - Senior Javascript Engineer
+        </h3>
+        <p>..............</p>
+      </div>
       <div class="mb-base-48">
         <h3>
           <a
@@ -16,28 +42,47 @@
                 Hex Digital
               </template>
               <template #icon>
-                <img class="logo" src="/hex-logo.svg" alt="Hex Digital">
+                <img
+                  class="logo"
+                  src="/hex-logo.svg"
+                  alt="Hex Digital"
+                >
               </template>
             </TextIconHover>
           </a> - Full Stack Developer
         </h3>
-        <p class="Work__para">
-          I have worked with many clients including Whirli in which I originally helped build the original site, a VueJS
-          and Laravel monolith. In addition, I led the re-build and transformation of the Whirli front end into a Nuxt
-          Typescript Universal Web App and modernised their release process to CI and CD with CircleCI and Cypress. This
-          included using Storybook to create a large library of accessible and reusable components, and introducing
+        <p>
+          I have worked with many clients including <ExternalLink href="https://whirli.com/">
+            Whirli</ExternalLink> in which I originally helped build the original site, a VueJS and Laravel monolith.
+          In addition, I led the re-build and transformation of the Whirli front end into a Nuxt Typescript Universal
+          Web App and modernised their release process to CI and CD with CircleCI and Cypress. This included using
+          Storybook to create a large library of accessible and reusable components, and introducing
           feature tests as well as unit and snapshot testing.
         </p>
-        <p class="Work__para">
+        <p>
           Other projects include:
         </p>
         <ul>
-          <li>Making Inko Nito and Zuma sites AA Accessible</li>
-          <li>Rebuilding the Tessian site with ReactJS</li>
+          <li>
+            Making
+            <ExternalLink
+              href="https://inkonitorestaurant.com/"
+            >
+              Inko Nito</ExternalLink>
+            and
+            <ExternalLink
+              href="https://zumarestaurant.com/"
+            >
+              Zuma</ExternalLink> sites AA Accessible
+          </li>
+          <li>
+            Rebuilding the <ExternalLink href="https://www.tessian.com/">
+              Tessian</ExternalLink> site with ReactJS
+          </li>
           <li>Building the Whirli blog using Wordpress as a headless CMS</li>
           <li>Contributing to the static Nuxt site for Brewtopia, a beer cataloging and searching app.</li>
         </ul>
-        <p class="Work__para">
+        <p>
           I have worked very closely with designers, UX, PMs and other developers to deliver these products using Agile
           methodologies. My time at Hex has been fast paced and a brilliant challenge. It has given me a fantastic
           opportunity for learning new technologies and bettering my skills at mentoring and presenting.
@@ -55,7 +100,11 @@
                 The Economist
               </template>
               <template #icon>
-                <img class="logo" src="/economist-logo.svg" alt="The Economist">
+                <img
+                  class="logo"
+                  src="/economist-logo.svg"
+                  alt="The Economist"
+                >
               </template>
             </TextIconHover>
           </a> - Front-End Engineer
@@ -68,12 +117,8 @@
           During my time at The Economist I worked in cross-functional and Agile teams covering the development of The
           Economist’s new website. This included integrating and testing new features. One of the main projects I have
           been a part of involved iterating on customer feedback and data analytics to improve the subscriber’s
-          experiences when they visit <a
-            href="https://www.economist.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="t-link"
-          >The Economist</a>. This involved working very closely with UI and UX
+          experiences when they visit <ExternalLink href="https://www.economist.com/">
+            The Economist</ExternalLink>. This involved working very closely with UI and UX
           designers, data analysts and other developers further down in the stack.
         </p>
         <p>
@@ -87,9 +132,10 @@
 
 <script>
 import TextIconHover from '@/components/TextIconHover.vue'
+import ExternalLink from '@/components/ExternalLink.vue'
 export default {
   name: 'WorkSection',
-  components: { TextIconHover }
+  components: { ExternalLink, TextIconHover }
 }
 </script>
 

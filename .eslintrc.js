@@ -12,5 +12,11 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'vue/multiline-html-element-content-newline': ['error', {
+      ignoreWhenEmpty: true,
+      ignores: ['pre', 'textarea', 'ExternalLink'],
+      allowEmptyLines: false
+    }]
+  }
 }
