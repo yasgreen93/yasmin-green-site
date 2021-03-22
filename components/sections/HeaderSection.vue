@@ -1,16 +1,12 @@
 <template>
   <section class="Header__header wrapper section">
     <transition name="fade-up" appear>
-      <h1 v-if="showContent" class="t-h1 text-primary">
-        <TextIconHover>
-          <template #text>
-            Yasmin Green
-          </template>
-          <template #icon>
-            <img class="Header__avatar" src="/profile-pic.jpg" alt="avatar">
-          </template>
-        </TextIconHover>
-      </h1>
+      <div v-if="showContent">
+        <img class="Header__avatar" src="/profile-pic.jpg" alt="avatar">
+        <h1 class="t-h1 text-primary">
+          Yasmin Green
+        </h1>
+      </div>
     </transition>
 
     <transition name="fade-up-delay" appear>
@@ -30,7 +26,7 @@
           <template #icon>
             <img class="icon" src="/developer.svg" alt="Developer">
           </template>
-        </TextIconHover>, currently enjoying working as a Lead Developer at
+        </TextIconHover>, currently enjoying working as a Technical Lead at
         <a
           href="https://rotate.studio/"
           target="_blank"
@@ -53,7 +49,7 @@
         v-if="showContent"
         class="Header__down-arr t-h2"
         aria-label="scroll down"
-        @click="$scrollTo('#work', 100, { easing: 'linear'})"
+        @click="$scrollTo('#work', 300, { easing: 'linear'})"
       >
         >
       </button>
@@ -89,10 +85,18 @@ export default {
 }
 
 .Header__avatar {
+  @apply mb-base-30;
+
   display: inline-block;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 75px;
+
+  @screen sm {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .Header__intro-txt {
