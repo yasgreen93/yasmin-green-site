@@ -51,19 +51,15 @@
         aria-label="scroll down"
         @click="$scrollTo('#work', 300, { easing: 'linear'})"
       >
-        >
+        <BaseSVG icon="down-arrow" />
       </button>
     </transition>
   </section>
 </template>
 
 <script>
-import TextIconHover from '@/components/TextIconHover.vue'
-
 export default {
   name: 'HeaderSection',
-
-  components: { TextIconHover },
 
   data: () => ({
     showContent: false
@@ -108,9 +104,21 @@ export default {
 }
 
 .Header__down-arr {
-  transform: rotate(90deg);
   position: absolute;
   bottom: 0.5em;
   margin: 0;
+  height: 0.75em;
+  padding: 5px;
+  box-sizing: unset;
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: translateY(4px);
+    }
+  }
 }
 </style>

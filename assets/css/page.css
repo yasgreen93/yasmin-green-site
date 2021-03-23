@@ -19,7 +19,7 @@ html {
 
 body,
 main {
-  @apply font-sans h-screen bg-offwhite text-darkblue;
+  @apply font-sans bg-offwhite text-darkblue;
 }
 
 ::selection {

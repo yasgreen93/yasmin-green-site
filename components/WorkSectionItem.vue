@@ -20,25 +20,7 @@
         aria-label="close"
         @click="$emit('close', id)"
       >
-        <svg
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-          x="0px"
-          y="0px"
-          width="357px"
-          height="357px"
-          viewBox="0 0 357 357"
-          style="enable-background: new 0 0 357 357;"
-          xml:space="preserve"
-        >
-          <g>
-            <g id="close">
-              <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5" />
-            </g>
-          </g>
-        </svg>
+        <BaseSVG icon="cross" />
       </button>
     </transition>
     <a
@@ -67,9 +49,10 @@
 </template>
 
 <script>
+import BaseSVG from '@/components/BaseSVG.vue'
 export default {
   name: 'WorkSectionItem',
-
+  components: { BaseSVG },
   props: {
     id: {
       type: String,
@@ -113,6 +96,10 @@ export default {
   @screen sm {
     grid-template-columns: 0.1fr 0.9fr;
     grid-column-gap: 18px;
+  }
+
+  &.is-active {
+    z-index: 2;
   }
 }
 
