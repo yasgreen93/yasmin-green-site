@@ -3,7 +3,7 @@
     <transition name="fade-up" appear>
       <div v-if="showContent">
         <img class="Header__avatar" src="/profile-pic.jpg" alt="avatar">
-        <h1 class="t-h1 text-primary">
+        <h1 class="t-h1 text-darkblue">
           Yasmin Green
         </h1>
       </div>

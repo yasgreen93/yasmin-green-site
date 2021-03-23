@@ -1,5 +1,5 @@
 <template>
-  <main class="Home relative">
+  <main class="Home">
     <HeaderSection />
 
     <WorkSection />

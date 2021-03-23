@@ -89,12 +89,11 @@ module.exports = {
         ]
       },
       colors: {
-        primary: '#4533d6',
-        secondary: '#2AFFE6',
-        red: '#AF0426',
-        black: '#141414',
-        darkGrey: '#1A1A1A',
-        offwhite: '#f6f6f6'
+        offwhite: '#e5eaf5',
+        darkblue: '#1e1e5d',
+        blue: '#587ffc',
+        lightblue: '#92a5fd',
+        pink: '#ff8692'
       },
       spacing: {
         'base-6': '6px',
