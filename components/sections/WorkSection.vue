@@ -2,18 +2,26 @@
   <section
     id="work"
     ref="work"
-    class="Work wrapper section"
+    class="Work section"
   >
-    <h2 class="t-h2 text-primary mb-base-54">
+    <h2 class="t-h2 text-pink mb-base-54">
       Work
     </h2>
-    <div class="Work__body">
-      <transition name="fade-up" appear>
+    <div class="Work__body" :class="{ 'has-active-section': !!activeSection }">
+      <div
+        class="Work__body-item relative"
+        :class="{ 'is-active': activeSection === 'rotate1' }"
+      >
+        <div class="Work__body-item-bg" :class="themes.pink.bg" />
         <WorkSectionItem
           id="rotate1"
           company-url="https://studiorotate.com/"
           company-text="Rotate°"
           job-role="Technical Lead"
+          :theme="themes.pink"
+          :active="activeSection === 'rotate1'"
+          @open="setActive('rotate1')"
+          @close="close"
         >
           <template #company-logo>
             <img
@@ -23,17 +31,24 @@
             >
           </template>
           <template #content>
-            <p>.................</p>
+            <p>{{ lorum }}</p>
           </template>
         </WorkSectionItem>
-      </transition>
-
-      <transition name="fade-up" appear>
+      </div>
+      <div
+        class="Work__body-item is-reversed relative"
+        :class="{[`${themes.darkblue.bg}`]: true, 'is-active': activeSection === 'rotate2'}"
+      >
+        <div class="Work__body-item-bg" :class="themes.darkblue.bg" />
         <WorkSectionItem
           id="rotate2"
           company-url="https://studiorotate.com/"
           company-text="Rotate°"
           job-role="Senior Javascript Engineer"
+          :theme="themes.darkblue"
+          :active="activeSection === 'rotate2'"
+          @open="setActive('rotate2')"
+          @close="close"
         >
           <template #company-logo>
             <img
@@ -43,17 +58,24 @@
             >
           </template>
           <template #content>
-            <p>.................</p>
+            <p>{{ lorum }}</p>
           </template>
         </WorkSectionItem>
-      </transition>
-
-      <transition name="fade-up" appear>
+      </div>
+      <div
+        class="Work__body-item relative"
+        :class="{ 'is-active': activeSection === 'hex3' }"
+      >
+        <div class="Work__body-item-bg" :class="themes.pink.bg" />
         <WorkSectionItem
           id="hex3"
           company-url="https://www.hexdigital.com/"
           company-text="Hex Digital"
           job-role="Full Stack Developer"
+          :theme="themes.pink"
+          :active="activeSection === 'hex3'"
+          @open="setActive('hex3')"
+          @close="close"
         >
           <template #company-logo>
             <img
@@ -65,7 +87,7 @@
           <template #content>
             <p>
               I have worked with many clients including
-              <ExternalLink href="https://whirli.com/">
+              <ExternalLink href="https://whirli.com/" :hover="themes.pink.accent">
                 Whirli</ExternalLink> in which I originally helped build the original site, a VueJS and Laravel monolith.
               In addition, I led the re-build and transformation of the Whirli front end into a Nuxt Typescript
               Universal
@@ -79,15 +101,21 @@
             <ul>
               <li>
                 Making
-                <ExternalLink href="https://inkonitorestaurant.com/">
-                  Inko Nito</ExternalLink> and
-                <ExternalLink href="https://zumarestaurant.com/">
-                  Zuma</ExternalLink> sites AA Accessible
+                <ExternalLink href="https://inkonitorestaurant.com/" :hover="themes.pink.accent">
+                  Inko Nito
+                </ExternalLink>
+                and
+                <ExternalLink href="https://zumarestaurant.com/" :hover="themes.pink.accent">
+                  Zuma
+                </ExternalLink>
+                sites AA Accessible
               </li>
               <li>
                 Rebuilding the
-                <ExternalLink href="https://www.tessian.com/">
-                  Tessian</ExternalLink> site with ReactJS
+                <ExternalLink href="https://www.tessian.com/" :hover="themes.pink.accent">
+                  Tessian
+                </ExternalLink>
+                site with ReactJS
               </li>
               <li>Building the Whirli blog using Wordpress as a headless CMS</li>
               <li>Contributing to the static Nuxt site for Brewtopia, a beer cataloging and searching app.</li>
@@ -100,14 +128,21 @@
             </p>
           </template>
         </WorkSectionItem>
-      </transition>
-
-      <transition name="fade-up" appear>
+      </div>
+      <div
+        class="Work__body-item is-reversed relative"
+        :class="{ 'is-active': activeSection === 'economist4' }"
+      >
+        <div class="Work__body-item-bg" :class="themes.darkblue.bg" />
         <WorkSectionItem
           id="economist4"
           company-url="https://www.economist.com/"
           company-text="The Economist"
           job-role="Front-End Engineer"
+          :theme="themes.darkblue"
+          :active="activeSection === 'economist4'"
+          @open="setActive('economist4')"
+          @close="close"
         >
           <template #company-logo>
             <img
@@ -128,7 +163,7 @@
               have
               been a part of involved iterating on customer feedback and data analytics to improve the subscriber’s
               experiences when they visit
-              <ExternalLink href="https://www.economist.com/">
+              <ExternalLink href="https://www.economist.com/" :hover="themes.darkblue.accent">
                 The Economist</ExternalLink>. This involved working very closely with UI and UX
               designers, data analysts and other developers further down in the stack.
             </p>
@@ -140,7 +175,7 @@
             </p>
           </template>
         </WorkSectionItem>
-      </transition>
+      </div>
     </div>
   </section>
 </template>
@@ -152,13 +187,93 @@ import WorkSectionItem from '@/components/WorkSectionItem.vue'
 export default {
   name: 'WorkSection',
 
-  components: { WorkSectionItem, ExternalLink }
+  components: { WorkSectionItem, ExternalLink },
+
+  data: () => ({
+    lorum: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    themes: {
+      offwhite: { bg: 'offwhite', text: 'darkblue', accent: 'pink' },
+      pink: { bg: 'pink', text: 'darkblue', accent: 'offwhite' },
+      darkblue: { bg: 'darkblue', text: 'offwhite', accent: 'pink' },
+      blue: { bg: 'blue', text: 'offwhite', accent: 'darkblue' },
+      lightblue: { bg: 'lightblue', text: 'darkblue', accent: 'pink' }
+    },
+    activeSection: null
+  }),
+
+  methods: {
+    setActive (id) {
+      this.$scrollTo(`#${id}`, 300, {
+        easing: 'linear',
+        offset: -80,
+        onDone: () => {
+          this.activeSection = id
+          this.$toggleScroll(true)
+        }
+      })
+    },
+    close () {
+      this.$toggleScroll(false)
+      this.activeSection = null
+    }
+  }
 }
 </script>
 
 <style lang="postcss" scoped>
 .Work {
   @apply flex items-center flex-col;
+}
+
+.Work__body {
+  @apply grid grid-cols-1 w-full;
+}
+
+.Work__body-item {
+  @apply w-1/2 flex justify-center;
+
+  height: 600px;
+  padding: 80px;
+  transition-property: opacity, width;
+  transition-duration: 0.5s, 0.5s;
+  transition-delay: 0.3s, 0s;
+  transition-timing-function: cubic-bezier(0.9, 0.15, 0.51, 0.95);
+
+  &.is-reversed {
+    justify-self: flex-end;
+  }
+
+  &.is-active {
+    @apply w-full;
+  }
+
+  .Work__body.has-active-section & {
+    &:not(.Work__body-item.is-active) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.Work__body-item-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.9, 0.15, 0.51, 0.95) 0.5s;
+
+  .Work__body-item.is-active & {
+    height: 100vh;
+  }
+
+  &.pink {
+    background-color: theme('colors.pink');
+  }
+
+  &.darkblue {
+    background-color: theme('colors.darkblue');
+  }
 }
 
 .logo {
