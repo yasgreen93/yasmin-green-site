@@ -4,7 +4,7 @@
     ref="work"
     class="Work section"
   >
-    <h2 class="t-h2 text-pink mb-base-54">
+    <h2 class="t-h2 mb-base-54">
       Work
     </h2>
     <div class="Work__body" :class="{ 'has-active-section': !!activeSection }">
@@ -37,7 +37,7 @@
       </div>
       <div
         class="Work__body-item is-reversed relative"
-        :class="{[`${themes.darkblue.bg}`]: true, 'is-active': activeSection === 'rotate2'}"
+        :class="{ 'is-active': activeSection === 'rotate2' }"
       >
         <div class="Work__body-item-bg" :class="themes.darkblue.bg" />
         <WorkSectionItem
@@ -230,13 +230,13 @@ export default {
 }
 
 .Work__body-item {
-  @apply w-1/2 flex justify-center;
+  @apply w-full flex justify-center;
 
   height: 600px;
   padding: 80px;
-  transition-property: opacity, width;
-  transition-duration: 0.5s, 0.5s;
-  transition-delay: 0.3s, 0s;
+  transition-property: opacity, width, z-index;
+  transition-duration: 0.5s, 0.5s, 0s;
+  transition-delay: 0.3s, 0.5s, 0.5s;
   transition-timing-function: cubic-bezier(0.9, 0.15, 0.51, 0.95);
 
   &.is-reversed {
@@ -245,13 +245,19 @@ export default {
 
   &.is-active {
     @apply w-full;
+
+    transition-delay: 0s, 0s, 0.5s;
   }
 
   .Work__body.has-active-section & {
-    &:not(.Work__body-item.is-active) {
-      opacity: 0;
-      pointer-events: none;
-    }
+     &:not(.Work__body-item.is-active) {
+       opacity: 0;
+       pointer-events: none;
+     }
+   }
+
+  @screen md {
+    @apply w-1/2;
   }
 }
 
@@ -261,10 +267,11 @@ export default {
   width: 100%;
   left: 0;
   top: 0;
-  transition: all 0.5s cubic-bezier(0.9, 0.15, 0.51, 0.95) 0.5s;
+  transition: transform 0.5s cubic-bezier(0.9, 0.15, 0.51, 0.95) 0s;
 
   .Work__body-item.is-active & {
-    height: 100vh;
+    transform: scaleY(10);
+    transition: transform 0.5s cubic-bezier(0.9, 0.15, 0.51, 0.95) 0.5s;
   }
 
   &.pink {
