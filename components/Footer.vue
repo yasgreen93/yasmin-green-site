@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .Footer {
-  @apply bg-darkblue w-full py-base-54 flex items-center;
+  @apply bg-darkblue w-full py-b54 flex items-center;
 
   height: 250px;
 }

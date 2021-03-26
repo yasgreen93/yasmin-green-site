@@ -2,9 +2,9 @@
   <section
     id="work"
     ref="work"
-    class="Work section"
+    class="Work section pb-0"
   >
-    <h2 class="t-h2 mb-base-54">
+    <h2 class="t-h2 mb-b54 mt-b36">
       Work
     </h2>
     <div class="Work__body" :class="{ 'has-active-section': !!activeSection }">

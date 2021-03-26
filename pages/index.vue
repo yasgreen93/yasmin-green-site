@@ -2,6 +2,8 @@
   <main class="Home">
     <HeaderSection />
     <WorkSection />
+    <SkillsSection />
+    <HobbiesSection />
   </main>
 </template>
 
