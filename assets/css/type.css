@@ -17,7 +17,7 @@ h5,
 .t-h5,
 h6,
 .t-h6 {
-  @apply font-serif font-bold mb-base-24;
+  @apply font-serif font-bold mb-b24;
 }
 
 h1,
@@ -85,7 +85,7 @@ h6,
 p,
 li,
 .t-para {
-  @apply font-sans normal-case text-base-sm mb-base-18;
+  @apply font-sans normal-case text-base-sm mb-b18;
 
   font-weight: 100;
   max-width: calc(600 / 16 * 1em);

@@ -18,9 +18,9 @@
  */
 
 .section {
-  @apply py-base-36;
+  @apply py-b36;
 
   @screen sm {
-    @apply py-base-60;
+    @apply py-b60;
   }
 }

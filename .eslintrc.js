@@ -17,6 +17,8 @@ module.exports = {
       ignoreWhenEmpty: true,
       ignores: ['pre', 'textarea', 'ExternalLink', 'n-link'],
       allowEmptyLines: false
-    }]
+    }],
+    curly: 'off',
+    'space-before-function-paren': 'off'
   }
 }

@@ -1,52 +1,25 @@
 <template>
-  <section class="Header__header wrapper section">
-    <transition name="fade-up" appear>
-      <div v-if="showContent">
-        <img class="Header__avatar" src="/profile-pic.jpg" alt="avatar">
-        <h1 class="t-h1 text-darkblue">
-          Yasmin Green
-        </h1>
-      </div>
-    </transition>
+  <section class="Header__header section bg-darkblue text-offwhite">
+    <div ref="header" class="wrapper">
+      <transition name="fade-up" appear>
+        <div v-if="showContent">
+          <img class="Header__avatar" src="/profile-pic.jpg" alt="avatar">
+          <h1 class="t-h1 text-offwhite">
+            Yasmin Green
+          </h1>
+        </div>
+      </transition>
 
-    <transition name="fade-up-delay" appear>
-      <p v-if="showContent" class="Header__intro-txt t-h3">
-        <TextIconHover>
-          <template #text>
-            Forensic Scientist
-          </template>
-          <template #icon>
-            <img class="icon" src="/fingerprint.svg" alt="Fingerprint">
-          </template>
-        </TextIconHover>
-        turned <TextIconHover>
-          <template #text>
-            web developer
-          </template>
-          <template #icon>
-            <img class="icon" src="/developer.svg" alt="Developer">
-          </template>
-        </TextIconHover>, currently enjoying working as a Technical Lead at
-        <a
-          href="https://rotate.studio/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TextIconHover>
-            <template #text>
-              Rotate°
-            </template>
-            <template #icon>
-              <img src="/rotate-logo.png" alt="Rotate logo">
-            </template>
-          </TextIconHover>
-        </a> in London.
-      </p>
-    </transition>
-
+      <transition name="fade-up-delay" appear>
+        <p v-if="showContent" class="Header__intro-txt t-h3">
+          Forensic Scientist turned web developer, currently enjoying working as a Technical Lead at Rotate° in London.
+        </p>
+      </transition>
+    </div>
     <transition name="fade-up-delay" appear>
       <button
         v-if="showContent"
+        ref="scrollBtn"
         class="Header__down-arr t-h2"
         aria-label="scroll down"
         @click="$scrollTo('#work', 300, { easing: 'linear'})"
@@ -58,17 +31,65 @@
 </template>
 
 <script>
+import anime from 'animejs'
+
 export default {
   name: 'HeaderSection',
 
   data: () => ({
-    showContent: false
+    showContent: false,
+    isHeaderVisible: false
   }),
 
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
       this.showContent = true
+
+      if (!this.$refs.header) return
+      window.addEventListener('scroll', this.parallax)
     })
+  },
+
+  destroyed() {
+    if (!this.$refs.header) return
+    if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', this.parallax)
+  },
+
+  methods: {
+    parallax() {
+      if (!this.$refs.header || !IntersectionObserver) return
+
+      this.observer = new IntersectionObserver(this.onElementObserved)
+      if (this.observer) this.observer.observe(this.$refs.header)
+      if (!this.isHeaderVisible) return
+
+      const scrolled = window.pageYOffset
+      const pageHeight = window.innerHeight
+      const opacity = (scrolled / pageHeight * 100) >= 25 ? 0 : 1
+      const coords = (scrolled * 0.2)
+
+      anime({
+        targets: this.$refs.header,
+        duration: 0,
+        translateY: coords,
+        easing: 'linear'
+      })
+      if (this.$refs.scrollBtn) {
+        anime({
+          targets: this.$refs.scrollBtn,
+          duration: 300,
+          opacity,
+          easing: 'linear'
+        })
+      }
+    },
+
+    onElementObserved(entries) {
+      entries.forEach(({ isIntersecting }) => {
+        this.isHeaderVisible = isIntersecting
+      })
+    }
   }
 }
 </script>
@@ -81,7 +102,7 @@ export default {
 }
 
 .Header__avatar {
-  @apply mb-base-30;
+  @apply mb-b30;
 
   display: inline-block;
   width: 100px;
