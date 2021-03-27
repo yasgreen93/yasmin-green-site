@@ -203,6 +203,7 @@ export default {
   destroyed() {
     if (!this.$refs.work) return
     if (this.observer) this.observer.disconnect()
+    if (this.timeout) clearTimeout(this.timeout)
     window.removeEventListener('scroll', throttle(this.observe, 500))
   },
   methods: {
@@ -218,9 +219,11 @@ export default {
       this.$emit('section-active', true)
     },
     close() {
+      const t = this
       this.$toggleScroll(false)
       this.activeSection = null
-      this.$emit('section-active', false)
+      const onCloseTransitionEndTime = 850
+      this.timeout = setTimeout(() => { t.$emit('section-active', false) }, onCloseTransitionEndTime)
     },
     observe() {
       if (!this.$refs.work) return
