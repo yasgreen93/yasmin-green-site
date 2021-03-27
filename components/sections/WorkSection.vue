@@ -210,7 +210,7 @@ export default {
     setActive(id) {
       this.$scrollTo(`#${id}`, 300, {
         easing: [0.18, 0.2, 0.5, 0.94],
-        offset: -80,
+        offset: -60,
         onDone: () => {
           this.activeSection = id
           this.$toggleScroll(true)
@@ -249,14 +249,18 @@ export default {
 }
 
 .Work__body-item {
+  --cb: cubic-bezier(0.9, 0.15, 0.51, 0.95);
+
   @apply w-full flex justify-center;
 
-  height: 600px;
-  padding: 80px;
-  transition-property: opacity, width, z-index;
-  transition-duration: 0.5s, 0.5s, 0s;
-  transition-delay: 0.3s, 0.5s, 0.5s;
-  transition-timing-function: cubic-bezier(0.9, 0.15, 0.51, 0.95);
+  height: 500px;
+  padding: 42px;
+  transition:
+    opacity 0.5s var(--cb) 0.3s,
+    width 0.5s var(--cb) 0.5s,
+    height 0.5s var(--cb) 0s,
+    padding 0.5s var(--cb) 0s,
+    z-index 0.5s ease 0.5s;
 
   &.is-reversed {
     justify-self: flex-end;
@@ -265,7 +269,16 @@ export default {
   &.is-active {
     @apply w-full;
 
-    transition-delay: 0s, 0s, 0.5s;
+    transition:
+      opacity 0.5s var(--cb) 0s,
+      width 0.5s var(--cb) 0s,
+      height 0.5s var(--cb) 0.2s,
+      padding 0.5s var(--cb) 0s,
+      z-index 0.5s ease 0.5s;
+
+    @screen smMax {
+      padding: 24px 42px;
+    }
   }
 
   .Work__body.has-active-section & {
@@ -275,8 +288,14 @@ export default {
      }
    }
 
+  @screen sm {
+    @apply w-1/2 py-b48 px-b54;
+  }
+
   @screen md {
-    @apply w-1/2;
+    @apply w-1/2 py-b60 px-b84;
+
+    height: 600px;
   }
 }
 
@@ -305,7 +324,7 @@ export default {
 .logo {
   width: 50px;
 
-  @screen sm {
+  @screen md {
     width: 80px;
   }
 }

@@ -9,7 +9,7 @@
       >
         <button
           class="NavBar__li-btn"
-          @click="$scrollTo(`#${section.id}`, 200,{ offset: -10, easing: [0.18, 0.2, 0.5, 0.94] })"
+          @click="$scrollTo(`#${section.id}`, 300,{ offset: -10, easing: [0.18, 0.2, 0.5, 0.94] })"
         >
           {{ section.name }}
           <transition name="fade">
