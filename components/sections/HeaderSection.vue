@@ -22,7 +22,7 @@
         ref="scrollBtn"
         class="Header__down-arr t-h2"
         aria-label="scroll down"
-        @click="$scrollTo('#work', 300, { easing: 'linear'})"
+        @click="$scrollTo('#work', 300,{ offset: -20, easing: [0.18, 0.2, 0.5, 0.94] })"
       >
         <BaseSVG icon="down-arrow" />
       </button>
@@ -84,10 +84,10 @@ export default {
         })
       }
     },
-
     onElementObserved(entries) {
       entries.forEach(({ isIntersecting }) => {
         this.isHeaderVisible = isIntersecting
+        this.$emit('intersecting', isIntersecting)
       })
     }
   }

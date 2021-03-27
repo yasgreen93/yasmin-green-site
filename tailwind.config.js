@@ -91,6 +91,7 @@ module.exports = {
       colors: {
         offwhite: '#f1f4ff',
         darkblue: '#1e1e5d',
+        darkblueOp25: 'rgba(30, 30, 93, 0.25)',
         blue: '#587ffc',
         lightblue: '#92a5fd',
         pink: '#ff8692'

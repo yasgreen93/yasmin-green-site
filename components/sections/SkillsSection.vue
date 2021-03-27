@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import throttle from 'lodash.throttle'
+
 export default {
   name: 'SkillsSection',
   data: () => ({
@@ -33,10 +35,27 @@ export default {
       'NuxtJS',
       'NodeJS'
     ]
-  })
+  }),
+  mounted() {
+    if (!this.$refs.skills) return
+    window.addEventListener('scroll', throttle(this.observe, 500))
+  },
+  destroyed() {
+    if (!this.$refs.skills) return
+    if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', throttle(this.observe, 500))
+  },
+  methods: {
+    observe() {
+      if (!this.$refs.skills) return
+      this.observer = new IntersectionObserver(this.onElementObserved)
+      if (this.observer) this.observer.observe(this.$refs.skills)
+    },
+    onElementObserved(entries) {
+      entries.forEach(({ intersectionRatio }) => {
+        if (intersectionRatio > 0.75) this.$emit('intersecting')
+      })
+    }
+  }
 }
 </script>
-
-<style scoped lang="postcss">
-
-</style>

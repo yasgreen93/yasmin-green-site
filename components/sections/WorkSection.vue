@@ -181,14 +181,10 @@
 </template>
 
 <script>
-import ExternalLink from '@/components/ExternalLink.vue'
-import WorkSectionItem from '@/components/WorkSectionItem.vue'
+import throttle from 'lodash.throttle'
 
 export default {
   name: 'WorkSection',
-
-  components: { WorkSectionItem, ExternalLink },
-
   data: () => ({
     lorum: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     themes: {
@@ -200,21 +196,41 @@ export default {
     },
     activeSection: null
   }),
-
+  mounted() {
+    if (!this.$refs.work) return
+    window.addEventListener('scroll', throttle(this.observe, 500))
+  },
+  destroyed() {
+    if (!this.$refs.work) return
+    if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', throttle(this.observe, 500))
+  },
   methods: {
-    setActive (id) {
+    setActive(id) {
       this.$scrollTo(`#${id}`, 300, {
-        easing: 'linear',
+        easing: [0.18, 0.2, 0.5, 0.94],
         offset: -80,
         onDone: () => {
           this.activeSection = id
           this.$toggleScroll(true)
         }
       })
+      this.$emit('section-active', true)
     },
-    close () {
+    close() {
       this.$toggleScroll(false)
       this.activeSection = null
+      this.$emit('section-active', false)
+    },
+    observe() {
+      if (!this.$refs.work) return
+      this.observer = new IntersectionObserver(this.onElementObserved)
+      if (this.observer) this.observer.observe(this.$refs.work)
+    },
+    onElementObserved(entries) {
+      entries.forEach(({ intersectionRatio }) => {
+        if (intersectionRatio > 0.2) this.$emit('intersecting')
+      })
     }
   }
 }

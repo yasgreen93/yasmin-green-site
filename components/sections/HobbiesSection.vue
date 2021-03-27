@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import throttle from 'lodash.throttle'
+
 export default {
   name: 'HobbiesSection',
   data: () => ({
@@ -31,7 +33,28 @@ export default {
       'Guitar',
       'Piano'
     ]
-  })
+  }),
+  mounted() {
+    if (!this.$refs.hobbies) return
+    window.addEventListener('scroll', throttle(this.observe, 500))
+  },
+  destroyed() {
+    if (!this.$refs.hobbies) return
+    if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', throttle(this.observe, 500))
+  },
+  methods: {
+    observe() {
+      if (!this.$refs.hobbies) return
+      this.observer = new IntersectionObserver(this.onElementObserved)
+      if (this.observer) this.observer.observe(this.$refs.hobbies)
+    },
+    onElementObserved(entries) {
+      entries.forEach(({ intersectionRatio }) => {
+        if (intersectionRatio > 0.75) this.$emit('intersecting')
+      })
+    }
+  }
 }
 </script>
 
