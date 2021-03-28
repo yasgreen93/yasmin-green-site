@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'ExternalLink',
+  name: 'ELink',
   props: {
     href: {
       type: String,

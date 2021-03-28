@@ -25,6 +25,9 @@
   /* Header */
   --base-header-height: 62px;
   --base-header-height-full: 132px;
+
+  /* Transitions */
+  --cb-transition: cubic-bezier(0.9, 0.15, 0.51, 0.95);
 }
 
 @screen sm {

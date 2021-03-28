@@ -22,51 +22,46 @@
 
     <div class="WorkSectionItem__scroll">
       <a
-        :href="companyUrl"
+        :href="job.url"
         target="_blank"
         rel="noopener noreferrer"
         class="WorkSectionItem__logo"
       >
-        <slot name="company-logo" />
+        <img
+          class="logo"
+          :src="job.logo"
+          :alt="job.title"
+        >
       </a>
       <div class="WorkSectionItem__text">
         <h3>
           <a
-            :href="companyUrl"
+            :href="job.url"
             target="_blank"
             rel="noopener noreferrer"
             class="WorkSectionItem__link"
             :class="`WorkSectionItem__link--${theme.accent}`"
           >
-            {{ companyText }}
-          </a> - {{ jobRole }}
+            {{ job.title }}
+          </a> - {{ job.role }}
         </h3>
-        <slot name="content" />
+        <slot />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BaseSVG from '@/components/BaseSVG.vue'
 export default {
   name: 'WorkSectionItem',
-  components: { BaseSVG },
+
   props: {
     id: {
       type: String,
       required: true
     },
-    companyUrl: {
-      type: String,
-      required: true
-    },
-    companyText: {
-      type: String,
-      required: true
-    },
-    jobRole: {
-      type: String,
+    job: {
+      type: Object,
       required: true
     },
     theme: {

@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     'vue/multiline-html-element-content-newline': ['error', {
       ignoreWhenEmpty: true,
-      ignores: ['pre', 'textarea', 'ExternalLink', 'n-link'],
+      ignores: ['pre', 'textarea', 'ELink', 'n-link', 'p', 'li'],
       allowEmptyLines: false
     }],
     curly: 'off',

@@ -39,7 +39,7 @@ export default {
   @apply fixed p-b6 w-full bg-offwhite;
 
   top: 0;
-  z-index: 3;
+  z-index: 6;
   transform: translateY(-100px);
   transition: transform 0.5s cubic-bezier(0.9, 0.15, 0.51, 0.95);
   border-bottom: 1px solid theme('colors.darkblueOp25');
@@ -60,7 +60,7 @@ export default {
 .NavBar__li {
   @apply mb-0 text-darkblue flex flex-col items-center justify-center;
 
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 
   &.is-active {
     @apply text-pink;
