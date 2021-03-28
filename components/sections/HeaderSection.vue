@@ -1,5 +1,5 @@
 <template>
-  <section class="Header__header section bg-darkblue text-offwhite">
+  <section class="Header__header section bg-darkblue text-offwhite relative z-1">
     <div ref="header" class="wrapper">
       <transition name="fade-up" appear>
         <div v-if="showContent">

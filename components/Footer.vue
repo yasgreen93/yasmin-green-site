@@ -1,27 +1,30 @@
 <template>
-  <footer class="Footer">
+  <footer class="Footer relative z-1">
     <div class="wrapper flex flex-col items-center justify-center">
       <p class="text-center text-offwhite">
         &copy; Yasmin Green {{ new Date().getFullYear() }}
       </p>
+      <p class="text-center text-offwhite">
+        Designed and built using NuxtJS (2021).
+      </p>
 
       <div class="flex text-offwhite">
-        <ExternalLink
+        <ELink
           href="https://github.com/yasgreen93"
           class="Footer__link"
           hover="pink"
           aria-label="Github"
         >
           <BaseSVG icon="github" />
-        </ExternalLink>
-        <ExternalLink
+        </ELink>
+        <ELink
           href="https://www.linkedin.com/in/yasmingreen-dev/"
           class="Footer__link"
           hover="pink"
           aria-label="Linkedin"
         >
           <BaseSVG icon="linkedin" />
-        </ExternalLink>
+        </ELink>
       </div>
     </div>
   </footer>

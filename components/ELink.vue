@@ -3,8 +3,8 @@
     :href="href"
     target="_blank"
     rel="noopener noreferrer"
-    class="ExternalLink"
-    :class="{[`ExternalLink--${hover}`]: hover}"
+    class="ELink"
+    :class="{[`ELink--${hover}`]: hover}"
   >
     <slot />
   </a>
@@ -27,17 +27,17 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.ExternalLink {
+.ELink {
   text-decoration: underline;
   transition: color 0.3s ease;
   color: inherit;
 }
 
-.ExternalLink--offwhite:hover {
+.ELink--offwhite:hover {
   color: theme('colors.offwhite');
 }
 
-.ExternalLink--pink:hover {
+.ELink--pink:hover {
   color: theme('colors.pink');
 }
 </style>

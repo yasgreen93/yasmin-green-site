@@ -23,5 +23,5 @@ main {
 }
 
 ::selection {
-  @apply bg-pink text-darkblue;
+  @apply bg-offwhite text-darkblue;
 }

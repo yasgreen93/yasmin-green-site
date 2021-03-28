@@ -2,7 +2,7 @@
   <section
     id="hobbies"
     ref="hobbies"
-    class="Hobbies section"
+    class="Hobbies section bg-offwhite"
   >
     <div class="wrapper">
       <h2 class="t-h2 mb-b54 mt-b36 text-center">

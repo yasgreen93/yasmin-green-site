@@ -9,20 +9,20 @@
     }"
   >
     <div class="WorkItem__body" :class="{[`bg-${theme.bg}`]: true, [`z-${zIndex}`]: zIndex}">
-      <!-- Close Btn -->
-      <button
-        type="button"
-        class="CloseBtn mb-0"
-        :class="{[`CloseBtn--${theme.accent}`]: theme, [`z-${zIndex}`]: zIndex}"
-        aria-label="close"
-        @click="$emit('close', id)"
-      >
-        <BaseSVG icon="cross" />
-      </button>
-
       <!-- Main content -->
       <div class="WorkItem__content" :class="[`z-${zIndex}`]">
         <div class="WorkItem__scroll">
+          <!-- Close Btn -->
+          <button
+            type="button"
+            class="CloseBtn mb-0"
+            :class="{[`CloseBtn--${theme.accent}`]: theme, [`z-${zIndex}`]: zIndex}"
+            aria-label="close"
+            @click="$emit('close', id)"
+          >
+            <BaseSVG icon="cross" />
+          </button>
+
           <a
             :href="company.url"
             target="_blank"
@@ -54,15 +54,11 @@
     </div>
 
     <!-- Gradient with read more btn -->
-    <div class="WorkItem__gradient">
+    <div class="WorkItem__gradient" :class="`z-${zIndex}`">
       <Gradient :color="theme.bg" :hide="active">
-        <button
-          type="button"
-          class="ReadMoreBtn t-h4 mb-0"
-          @click="$emit('open', id)"
-        >
+        <BaseButton :theme="theme" @click.native="$emit('open', id)">
           Read more
-        </button>
+        </BaseButton>
       </Gradient>
     </div>
   </div>
@@ -162,7 +158,6 @@ export default {
   bottom: 42px;
   left: 0;
   width: 100%;
-  z-index: 5;
   height: 40%;
   transform: translateY(0);
   opacity: 1;
@@ -185,15 +180,16 @@ export default {
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 12px;
-  top: 12px;
-  transition: opacity 0.3s ease, color 0.3s ease;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s ease 0s, color 0.3s ease;
   opacity: 0;
   pointer-events: none;
 
   .WorkItem.is-active & {
     opacity: 1;
     pointer-events: auto;
+    transition: opacity 0.3s ease 0.5s, color 0.3s ease;
   }
 }
 
