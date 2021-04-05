@@ -58,4 +58,8 @@ export default {
     margin-left: 24px;
   }
 }
+
+::selection {
+  @apply bg-pink text-darkblue;
+}
 </style>

@@ -142,4 +142,8 @@ export default {
     }
   }
 }
+
+::selection {
+  @apply bg-pink text-darkblue;
+}
 </style>

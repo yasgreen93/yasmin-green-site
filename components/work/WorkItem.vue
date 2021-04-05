@@ -3,6 +3,7 @@
     :id="id"
     class="WorkItem"
     :class="{
+      [`theme-${theme.bg}`]: theme,
       [`text-${theme.text}`]: true,
       'is-active': active,
       'is-reversed': reverse
@@ -54,7 +55,11 @@
     </div>
 
     <!-- Gradient with read more btn -->
-    <div class="WorkItem__gradient" :class="`z-${zIndex}`">
+    <div
+      v-if="!hideShowMoreBtn"
+      class="WorkItem__gradient"
+      :class="`z-${zIndex}`"
+    >
       <Gradient :color="theme.bg" :hide="active">
         <BaseButton :theme="theme" @click.native="$emit('open', id)">
           Read more
@@ -76,6 +81,7 @@ export default {
     theme: { type: Object, required: true },
     active: { type: Boolean, default: false },
     reverse: { type: Boolean, default: false },
+    hideShowMoreBtn: { type: Boolean, default: false },
     zIndex: { type: Number, default: 1 }
   }
 }
@@ -199,5 +205,17 @@ export default {
 
 .CloseBtn--offwhite:hover {
   color: theme('colors.offwhite');
+}
+
+.theme-pink {
+  ::selection {
+    @apply bg-offwhite text-darkblue;
+  }
+}
+
+.theme-darkblue {
+  ::selection {
+    @apply bg-pink text-darkblue;
+  }
 }
 </style>

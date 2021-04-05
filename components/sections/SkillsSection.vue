@@ -8,8 +8,12 @@
       <h2 class="t-h2 mb-b54 mt-b36 text-center">
         Skills
       </h2>
-      <ul>
-        <li v-for="(skill, index) in skills" :key="index">
+      <ul class="Skills__list">
+        <li
+          v-for="(skill, index) in skills"
+          :key="index"
+          class="Skills__list-item"
+        >
           {{ skill }}
         </li>
       </ul>
@@ -26,14 +30,19 @@ export default {
     skills: [
       'Javascript',
       'Typescript',
+      'VueJS',
+      'NuxtJS',
       'HTML',
+      'NodeJS',
       'CSS',
       'SCSS',
       'TailwindCSS',
-      'VueJS',
       'ReactJS',
-      'NuxtJS',
-      'NodeJS'
+      'React Native',
+      'Jest',
+      'Enzyme',
+      'GraphQL',
+      'Storybook'
     ]
   }),
   mounted() {
@@ -59,3 +68,28 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.Skills__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  list-style-type: none;
+  grid-row-gap: 18px;
+
+  @screen sm {
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.Skills__list-item {
+  align-self: center;
+  justify-self: center;
+}
+
+::selection {
+  @apply bg-offwhite text-darkblue;
+}
+</style>

@@ -8,8 +8,12 @@
       <h2 class="t-h2 mb-b54 mt-b36 text-center">
         Hobbies
       </h2>
-      <ul>
-        <li v-for="(hobby, index) in hobbies" :key="index">
+      <ul class="Hobbies__list">
+        <li
+          v-for="(hobby, index) in hobbies"
+          :key="index"
+          class="Hobbies__list-item"
+        >
           {{ hobby }}
         </li>
       </ul>
@@ -58,4 +62,27 @@ export default {
 }
 </script>
 
-<style scoped lang="postcss" />
+<style lang="postcss" scoped>
+.Hobbies__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  list-style-type: none;
+  grid-row-gap: 18px;
+
+  @screen sm {
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.Hobbies__list-item {
+  align-self: center;
+  justify-self: center;
+}
+
+::selection {
+  @apply bg-pink text-darkblue;
+}
+</style>

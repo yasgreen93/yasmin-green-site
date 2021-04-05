@@ -21,7 +21,3 @@ body,
 main {
   @apply font-sans bg-offwhite text-darkblue;
 }
-
-::selection {
-  @apply bg-offwhite text-darkblue;
-}
