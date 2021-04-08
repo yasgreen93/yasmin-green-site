@@ -97,8 +97,4 @@ export default {
 .Work__body {
   @apply grid grid-cols-1 w-full;
 }
-
-::selection {
-  @apply bg-pink text-darkblue;
-}
 </style>

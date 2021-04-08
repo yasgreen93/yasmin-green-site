@@ -12,7 +12,15 @@ export default [
     role: 'Technical Lead',
     content: `
       <p>
-        WIP
+        Lead the rebuild of <a
+          href="https://www.biggreenegg.co.uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Big Green Egg</a>, moving their old site from Magento, to a more modern stack of NuxtJS, TailwindCSS, DatoCMS, CommerceLayer and NodeJS.
+      </p>
+      <p>
+        More to come...
       </p>
     `,
     hideShowMoreBtn: true
@@ -28,7 +36,14 @@ export default [
     role: 'Senior Javascript Engineer',
     content: `
       <p>
-        Worked on Chilly's Bottles Series 2 website rebuild.
+        Worked on the
+        <a
+          href="https://www.chillysbottles.com/uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Chilly's Bottles</a> Series 2 website rebuild.
+        Tech stack includes NuxtJS, PostCSS, DatoCMS, CommerceLayer and Vercel.
       </p>
     `,
     hideShowMoreBtn: true
@@ -44,10 +59,12 @@ export default [
     role: 'Full Stack Developer',
     content: `
     <p>I have worked with many clients including
-      <ELink
+      <a
         href="https://whirli.com/"
-        :hover="themes.pink.accent"
-      >Whirli</ELink> in which I originally helped build the original site, a VueJS and Laravel monolith.
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ELink"
+      >Whirli</a> in which I originally helped build the original site, a VueJS and Laravel monolith.
       In addition, I led the re-build and transformation of the Whirli front end into a Nuxt Typescript
       Universal
       Web App and modernised their release process to CI and CD with CircleCI and Cypress. This included using
@@ -58,22 +75,28 @@ export default [
     <ul>
       <li>
         Making
-        <ELink
+        <a
           href="https://inkonitorestaurant.com/"
-          :hover="themes.pink.accent"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
         >Inko Nito
-        </ELink> and
-        <ELink
+        </a> and
+        <a
           href="https://zumarestaurant.com/"
-          :hover="themes.pink.accent"
-        >Zuma</ELink> sites AA Accessible
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Zuma</a> sites AA Accessible
       </li>
       <li>
         Rebuilding the
-        <ELink
+        <a
           href="https://www.tessian.com/"
-          :hover="themes.pink.accent"
-        >Tessian</ELink> site with ReactJS
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Tessian</a> site with ReactJS
       </li>
       <li>Building the Whirli blog using Wordpress as a headless CMS</li>
       <li>Contributing to the static Nuxt site for Brewtopia, a beer cataloging and searching app.</li>
@@ -107,10 +130,12 @@ export default [
       have
       been a part of involved iterating on customer feedback and data analytics to improve the subscriber’s
       experiences when they visit
-      <ELink
+      <a
         href="https://www.economist.com/"
-        :hover="themes.darkblue.accent"
-      >The Economist</ELink>. This involved working very closely with UI and UX
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ELink"
+      >The Economist</a>. This involved working very closely with UI and UX
       designers, data analysts and other developers further down in the stack.
     </p>
     <p>

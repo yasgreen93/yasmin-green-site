@@ -206,16 +206,4 @@ export default {
 .CloseBtn--offwhite:hover {
   color: theme('colors.offwhite');
 }
-
-.theme-pink {
-  ::selection {
-    @apply bg-offwhite text-darkblue;
-  }
-}
-
-.theme-darkblue {
-  ::selection {
-    @apply bg-pink text-darkblue;
-  }
-}
 </style>

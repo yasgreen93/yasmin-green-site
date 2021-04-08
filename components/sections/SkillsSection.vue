@@ -88,8 +88,4 @@ export default {
   align-self: center;
   justify-self: center;
 }
-
-::selection {
-  @apply bg-offwhite text-darkblue;
-}
 </style>

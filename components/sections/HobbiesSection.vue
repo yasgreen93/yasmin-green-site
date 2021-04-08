@@ -14,7 +14,10 @@
           :key="index"
           class="Hobbies__list-item"
         >
-          {{ hobby }}
+          <p class="font-bold mb-12">
+            {{ hobby.title }}
+          </p>
+          <div v-html="hobby.content" />
         </li>
       </ul>
     </div>
@@ -23,21 +26,11 @@
 
 <script>
 import throttle from 'lodash.throttle'
+import hobbies from '@/content/hobbies.js'
 
 export default {
   name: 'HobbiesSection',
-  data: () => ({
-    hobbies: [
-      'Knitting',
-      'Reading',
-      'Skateboarding',
-      'Bouldering',
-      'Snowboarding',
-      'Skiing',
-      'Guitar',
-      'Piano'
-    ]
-  }),
+  data: () => ({ hobbies }),
   mounted() {
     if (!this.$refs.hobbies) return
     window.addEventListener('scroll', throttle(this.observe, 500))
@@ -65,24 +58,32 @@ export default {
 <style lang="postcss" scoped>
 .Hobbies__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   list-style-type: none;
-  grid-row-gap: 18px;
+  margin: 0;
 
   @screen sm {
+    grid-column-gap: 36px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @screen md {
     grid-row-gap: 24px;
+    grid-column-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
   }
 }
 
 .Hobbies__list-item {
-  align-self: center;
-  justify-self: center;
-}
+  @apply m-0;
 
-::selection {
-  @apply bg-pink text-darkblue;
+  p {
+    margin: 0;
+  }
+
+  @screen sm {
+    @apply px-b24;
+  }
 }
 </style>

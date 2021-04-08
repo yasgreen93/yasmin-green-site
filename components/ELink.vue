@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .ELink {
   text-decoration: underline;
   transition: color 0.3s ease;
