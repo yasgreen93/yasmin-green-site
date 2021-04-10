@@ -10,6 +10,7 @@ export default [
           target="_blank"
           rel="noopener noreferrer"
           class="ELink"
+          aria-label="Ravelry site"
         >here</a>!</p>
     `
   },

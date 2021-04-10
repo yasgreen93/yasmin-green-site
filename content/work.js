@@ -80,8 +80,7 @@ export default [
           target="_blank"
           rel="noopener noreferrer"
           class="ELink"
-        >Inko Nito
-        </a> and
+        >Inko Nito</a> and
         <a
           href="https://zumarestaurant.com/"
           target="_blank"
