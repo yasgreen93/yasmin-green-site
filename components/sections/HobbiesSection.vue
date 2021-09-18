@@ -2,7 +2,7 @@
   <section
     id="hobbies"
     ref="hobbies"
-    class="Hobbies section bg-offwhite"
+    class="Hobbies section bg-transparent relative"
   >
     <div class="wrapper">
       <h2 class="t-h2 mb-b54 mt-b36 text-center">
@@ -58,10 +58,11 @@ export default {
 <style lang="postcss" scoped>
 .Hobbies__list {
   display: grid;
+  max-width: 800px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
 
   @screen sm {
     grid-column-gap: 36px;
@@ -80,10 +81,6 @@ export default {
 
   p {
     margin: 0;
-  }
-
-  @screen sm {
-    @apply px-b24;
   }
 }
 </style>

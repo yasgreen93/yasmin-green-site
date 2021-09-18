@@ -11,19 +11,32 @@ export default [
     },
     role: 'Technical Lead',
     content: `
-      <p>
-        Lead the rebuild of <a
-          href="https://www.biggreenegg.co.uk"
+      <ul>
+        <li>Lead the rebuild of <a
+          href="https://www.biggreenegg.co.uk/"
           target="_blank"
           rel="noopener noreferrer"
           class="ELink"
-        >Big Green Egg</a>, moving their old site from Magento, to a more modern stack of NuxtJS, TailwindCSS, DatoCMS, CommerceLayer and NodeJS.
-      </p>
-      <p>
-        More to come...
-      </p>
+        >Big Green Egg</a>, moving their old site from Magento to a modern stack of Nuxt, VueJS, TailwindCSS, DatoCMS, Commerce Layer and NodeJS. Utilised Hookdeck to massively simplify API webhook processes, from order processing to sending transactional emails with Mailgun making the whole API platform a lot more stable.</li>
+        <li>Lead the rebuild of Big Green Egg’s Dealers (B2B) portal utilising B2BWave and expanding on it to add bespoke functionality and features that the client required. This made customer-service and user experiences a lot clearer and easier.</li>
+        <li>Lead the rebuild of <a
+          href="https://commercelayer.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Commerce Layer</a> in Nuxt, VueJS, TailwindCSS, DatoCMS.</li>
+        <li>Lead the migration of <a
+          href="https://bamford.com/uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Bamford's</a> two UK and US Shopify stores to one Shopify store that handles multiple currencies - built with Shopify and Contentful’s headless APIs, Nuxt, VueJS, PostCSS. Massively simplified the front end and API increasing performance and stability.</li>
+        <li>Started and was the driving force of technical documentation for projects. Not only has this helped fellow developers, but Project Managers, Strategists, and Marketing, understand how certain features work, troubleshooting issues, and the architectural overview.</li>
+        <li>Conducted many interviews to hire mid-weight and senior developers.</li>
+        <li>Conducted many quarterly reviews for the developers in my team, reviewing their goals and discussing areas of improvements.</li>
+      </ul>
     `,
-    hideShowMoreBtn: true
+    hideShowMoreBtn: false
   },
   {
     id: 'rotate2',
@@ -35,16 +48,10 @@ export default [
     },
     role: 'Senior Javascript Engineer',
     content: `
-      <p>
-        Worked on the
-        <a
-          href="https://www.chillysbottles.com/uk"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="ELink"
-        >Chilly's Bottles</a> Series 2 website rebuild.
-        Tech stack includes NuxtJS, PostCSS, DatoCMS, CommerceLayer and Vercel.
-      </p>
+      <ul>
+        <li>Contributed towards the Chilly's Bottles Series 2 website rebuild with Nuxt, VueJS, PostCSS, DatoCMS and Commerce Layer.</li>
+        <li>Mentored developers in feature development, code reviews and helping them approach problems from different angles.</li>
+      </ul>
     `,
     hideShowMoreBtn: true
   },

@@ -2,7 +2,7 @@
   <section
     id="skills"
     ref="skills"
-    class="Skills section bg-pink"
+    class="Skills section bg-pink relative"
   >
     <div class="wrapper">
       <h2 class="t-h2 mb-b54 mt-b36 text-center">
@@ -79,13 +79,21 @@ export default {
 
   @screen sm {
     grid-row-gap: 24px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 1fr);
+    justify-content: space-evenly;
   }
 }
 
 .Skills__list-item {
-  align-self: center;
-  justify-self: center;
+  @apply mb-0;
+
+  @screen smMax {
+    text-align: center;
+  }
+
+  @screen sm {
+    width: fit-content;
+  }
 }
 </style>

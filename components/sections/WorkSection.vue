@@ -4,7 +4,7 @@
     ref="work"
     class="Work section pb-0"
   >
-    <h2 class="t-h2 mb-b54 mt-b36">
+    <h2 class="t-h2 mb-b54 mt-b36 z-2">
       Work
     </h2>
     <div class="Work__body" :class="{ 'has-active-section': !!activeSection }">
@@ -24,13 +24,15 @@
         @close="close"
       />
     </div>
+    <div class="Work__bg">
+      <img src="/background.jpg" alt="Background shapes" role="presentation">
+    </div>
   </section>
 </template>
 
 <script>
 import throttle from 'lodash.throttle'
 import workData from '@/content/work.js'
-import anime from 'animejs'
 
 export default {
   name: 'WorkSection',
@@ -96,5 +98,9 @@ export default {
 
 .Work__body {
   @apply grid grid-cols-1 w-full;
+}
+
+.Work__bg {
+  @apply fixed top-0 bottom-0;
 }
 </style>

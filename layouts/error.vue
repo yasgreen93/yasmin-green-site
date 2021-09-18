@@ -8,17 +8,8 @@
           </h1>
           <h2>
             Let's go
-            <n-link to="/" class="t-link">
-              <TextIconHover>
-                <template #text>
-                  home
-                </template>
-                <template #icon>
-                  <img src="/android-chrome-192x192.png" alt="Yasmin Logo">
-                </template>
-              </TextIconHover>
-            </n-link>
-            .
+            <n-link to="/" class="t-link underline">
+              home</n-link>.
           </h2>
         </template>
         <template v-else>
@@ -45,6 +36,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.Error {
+  height: calc(100vh - 250px);
+}
+
 .Error__header {
   max-width: calc(650 / 72 * 1em);
 }
