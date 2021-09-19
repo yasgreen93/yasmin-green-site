@@ -101,6 +101,10 @@ export default {
 }
 
 .Work__bg {
-  @apply fixed top-0 bottom-0;
+  @apply hidden;
+
+  @screen sm {
+    @apply block fixed top-0 bottom-0 h-full;
+  }
 }
 </style>
