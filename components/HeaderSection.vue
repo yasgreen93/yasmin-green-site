@@ -51,7 +51,7 @@ export default {
 .Header__header {
   @apply flex flex-col items-center justify-center text-center;
 
-  height: 90vh;
+  height: 95dvh;
 }
 
 .Header__avatar {
