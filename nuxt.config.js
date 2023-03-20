@@ -1,7 +1,7 @@
 import path from 'path'
 
 const title = 'Yasmin Green | Developer'
-const description = 'Yasmin Green - Lead developer working with Javascript, HTML, CSS, NodeJS, NuxtJS, VueJS, ReactJS, PHP, Laravel and more, building a variety of websites.'
+const description = 'Yasmin Green - Software Engineer working with Javascript, HTML, CSS, NodeJS, NuxtJS, VueJS, ReactJS, NextJS, TailwindCSS and more, building a variety of websites.'
 
 export default {
   target: 'static',
@@ -25,8 +25,8 @@ export default {
       { name: 'twitter:title', content: title },
       { name: 'twitter:image', content: '/android-chrome-512x512.png' },
       { hid: 'description', name: 'description', content: description },
-      { name: 'msapplication-TileColor', content: '#f1f4ff' },
-      { name: 'theme-color', content: '#1e1e5d' }
+      { name: 'msapplication-TileColor', content: '#d9dade' },
+      { name: 'theme-color', content: '#7A60FF' }
     ],
     link: [
       { rel: 'canonical', href: 'https://www.yasmingreen.com' },
@@ -36,7 +36,7 @@ export default {
       { rel: 'alternate icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#1e1e5d' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#7A60FF' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap' }
