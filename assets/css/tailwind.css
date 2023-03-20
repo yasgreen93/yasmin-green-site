@@ -20,7 +20,7 @@
   /* Structural */
   --base-column: 54px;
   --base-outer-gutter-percentage: calc(var(--unit-outer-gutter) / var(--unit-screen-size) * 100%);
-  --base-outer-gutter: theme('spacing.b24');
+  --base-outer-gutter: theme('spacing.4');
 
   /* Header */
   --base-header-height: 62px;
@@ -44,22 +44,6 @@
 @screen xl {
   :root {
     /* Structural */
-    --base-outer-gutter: theme('spacing.b90');
+    --base-outer-gutter: theme('spacing.15');
   }
-}
-
-.z-1 {
-  z-index: 1;
-}
-
-.z-2 {
-  z-index: 2;
-}
-
-.z-3 {
-  z-index: 3;
-}
-
-.z-4 {
-  z-index: 4;
 }

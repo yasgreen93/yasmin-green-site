@@ -18,14 +18,14 @@ module.exports = {
         'h2-lg': ['48px', '1'],
         'h2-sm': ['27px', '1.111111111'],
         'h3-lg': [
-          '33px',
+          '30px',
           {
             lineHeight: '1.2',
             letterSpacing: '-0.5px'
           }
         ],
         'h3-sm': [
-          '22px',
+          '24px',
           {
             lineHeight: '1.2',
             letterSpacing: '-0.5px'
@@ -74,7 +74,7 @@ module.exports = {
           }
         ],
         'base-lg': [
-          '18px',
+          '17px',
           {
             lineHeight: '1.6',
             letterSpacing: '0.005em'
@@ -89,35 +89,36 @@ module.exports = {
         ]
       },
       colors: {
-        offwhite: '#f1f4ff',
-        darkblue: '#1e1e5d',
-        darkblueOp25: 'rgba(30, 30, 93, 0.25)',
-        blue: '#587ffc',
-        lightblue: '#92a5fd',
-        pink: '#ff8692'
+        'off-white': '#f1f4ff',
+        'light-grey': '#d9dade',
+        'off-black': '#161616',
+        violet: '#7A60FF'
+      },
+      container: {
+        center: true
       },
       spacing: {
-        b6: '6px',
-        b12: '12px',
-        b18: '18px',
-        b24: '24px',
-        b30: '30px',
-        b36: '36px',
-        b42: '42px',
-        b48: '48px',
-        b54: '54px',
-        b60: '60px',
-        b66: '66px',
-        b72: '72px',
-        b78: '78px',
-        b84: '84px',
-        b90: '90px',
-        b96: '96px',
-        b102: '102px',
-        b108: '108px',
-        b114: '114px',
-        b120: '120px',
-        b150: '150px'
+        1: '6px',
+        2: '12px',
+        3: '18px',
+        4: '24px',
+        5: '30px',
+        6: '36px',
+        7: '42px',
+        8: '48px',
+        9: '54px',
+        10: '60px',
+        11: '66px',
+        12: '72px',
+        13: '78px',
+        14: '84px',
+        15: '90px',
+        16: '96px',
+        17: '102px',
+        18: '108px',
+        19: '114px',
+        20: '120px',
+        21: '150px'
       },
       screens: {
         xs: '600px',

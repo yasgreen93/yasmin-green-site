@@ -18,9 +18,9 @@
  */
 
 .section {
-  @apply py-b36;
+  @apply my-13;
 
   @screen sm {
-    @apply py-b60;
+    @apply my-16;
   }
 }

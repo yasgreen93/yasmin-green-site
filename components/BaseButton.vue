@@ -26,19 +26,19 @@ export default {
   transition: color 0.3s ease;
 }
 
-.BaseButton--darkblue {
-  color: theme('colors.darkblue');
+.BaseButton--off-black {
+  color: theme('colors.off-black');
 
   &:hover {
-    color: theme('colors.offwhite');
+    color: theme('colors.off-white');
   }
 }
 
-.BaseButton--offwhite {
-  color: theme('colors.offwhite');
+.BaseButton--off-white {
+  color: theme('colors.off-white');
 
   &:hover {
-    color: theme('colors.pink');
+    color: theme('colors.violet');
   }
 }
 </style>

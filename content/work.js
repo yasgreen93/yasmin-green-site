@@ -1,16 +1,38 @@
-import themes from '@/config/themes.js'
-
 export default [
   {
+    id: 'engine1',
+    company: {
+      name: 'Engine Digital',
+      url: 'https://enginedigital.com/'
+    },
+    role: 'Senior Front-End Engineer',
+    content: `
+      <h6><i>June 2022 - March 2023</i></h6>
+      <ul>
+        <li>Led the development side of the redesign and rebuild of the <a
+          href="https://www.freehouse.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Freehouse Collective</a> site in a cross-functional team. The site is built with ReactJS, NextJS, and TailwindCSS and uses DatoCMS.</li>
+        <li>Worked on the rebuild of <a
+          href="https://nicolawealth.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ELink"
+        >Nicola Wealth</a> site which was built with ReactJS, NextJS, and TailwindCSS and uses DatoCMS.</li>
+      </ul>
+    `
+  },
+  {
     id: 'rotate1',
-    theme: themes.pink,
     company: {
       name: 'Rotate°',
-      url: 'https://studiorotate.com/',
-      logo: { url: '/rotate-logo.png', alt: 'Rotate logo' }
+      url: 'https://studiorotate.com/'
     },
     role: 'Technical Lead',
     content: `
+      <h6><i>Jan 2021 - May 2022</i></h6>
       <ul>
         <li>Lead the rebuild of <a
           href="https://www.biggreenegg.co.uk/"
@@ -35,36 +57,32 @@ export default [
         <li>Conducted many interviews to hire mid-weight and senior developers.</li>
         <li>Conducted many quarterly reviews for the developers in my team, reviewing their goals and discussing areas of improvements.</li>
       </ul>
-    `,
-    hideShowMoreBtn: false
+    `
   },
   {
     id: 'rotate2',
-    theme: themes.darkblue,
     company: {
       name: 'Rotate°',
-      url: 'https://studiorotate.com/',
-      logo: { url: '/rotate-logo.png', alt: 'Rotate logo' }
+      url: 'https://studiorotate.com/'
     },
     role: 'Senior Javascript Engineer',
     content: `
+      <h6><i>Sep 2020 - Dec 2020</i></h6>
       <ul>
         <li>Contributed towards the Chilly's Bottles Series 2 website rebuild with Nuxt, VueJS, PostCSS, DatoCMS and Commerce Layer.</li>
         <li>Mentored developers in feature development, code reviews and helping them approach problems from different angles.</li>
       </ul>
-    `,
-    hideShowMoreBtn: true
+    `
   },
   {
     id: 'hex3',
-    theme: themes.pink,
     company: {
       name: 'Hex Digital',
-      url: 'https://www.hexdigital.com/',
-      logo: { url: '/hex-logo.png', alt: 'Hex logo' }
+      url: 'https://www.hexdigital.com/'
     },
     role: 'Full Stack Developer',
     content: `
+    <h6><i>Aug 2018 - Sep 2020</i></h6>
     <p>I have worked with many clients including
       <a
         href="https://whirli.com/"
@@ -117,14 +135,13 @@ export default [
   },
   {
     id: 'economist4',
-    theme: themes.darkblue,
     company: {
       name: 'The Economist',
-      url: 'https://www.economist.com/',
-      logo: { url: '/economist-logo.png', alt: 'Economist logo' }
+      url: 'https://www.economist.com/'
     },
     role: 'Front-End Engineer',
     content: `
+    <h6><i>June 2016 - Aug 2018</i></h6>
     <p>
       I was at The Economist for 2 years using a number of new technologies, including ReactJS, NodeJS, GraphQL,
       Relay, Redux, Jest, Mocha, Chai and Enzyme.

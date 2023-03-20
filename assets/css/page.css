@@ -19,9 +19,9 @@ html {
 
 body,
 main {
-  @apply font-sans bg-offwhite text-darkblue;
+  @apply font-sans bg-off-white text-off-black;
 }
 
 ::selection {
-  @apply bg-pink text-darkblue;
+  @apply bg-violet text-off-white;
 }

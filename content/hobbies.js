@@ -19,12 +19,8 @@ export default [
     content: '<p>Favourite books include "The Institute" by Stephen King, and "Endurance: A Year in Space, A Lifetime of Discovery" by Scott Kelly.</p>'
   },
   {
-    title: 'Bouldering',
-    content: '<p>Trying to battle my fear of heights and build strength at the same time...</p>'
-  },
-  {
     title: 'Skiing & Snowboarding',
-    content: '<p>Absolutely love skiing and snowboarding, just a shame I end up on the floor most of the time...</p>'
+    content: '<p>Absolutely love skiing and snowboarding, just a shame I end up face first in the snow most of the time...</p>'
   },
   {
     title: 'Music',
