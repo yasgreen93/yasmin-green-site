@@ -4,7 +4,6 @@
     target="_blank"
     rel="noopener noreferrer"
     class="ELink"
-    :class="{[`ELink--${hover}`]: hover}"
   >
     <slot />
   </a>
@@ -28,16 +27,16 @@ export default {
 
 <style lang="postcss">
 .ELink {
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  @apply underline transition-colors duration-300 ease-in-out;
+
   color: inherit;
 }
 
-.ELink--offwhite:hover {
-  color: theme('colors.offwhite');
+.ELink:hover {
+  @apply text-violet fill-current;
 }
 
-.ELink--pink:hover {
-  color: theme('colors.pink');
+.ELink--no-underline {
+  @apply no-underline;
 }
 </style>
