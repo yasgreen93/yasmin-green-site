@@ -7,7 +7,7 @@ export default [
     },
     role: 'Senior Front-End Engineer',
     content: `
-      <h6><i>June 2022 - March 2023</i></h6>
+      <h5><i>June 2022 - March 2023</i></h5>
       <ul>
         <li>Led the development side of the redesign and rebuild of the <a
           href="https://www.freehouse.co/"
@@ -32,7 +32,7 @@ export default [
     },
     role: 'Technical Lead',
     content: `
-      <h6><i>Jan 2021 - May 2022</i></h6>
+      <h5><i>Jan 2021 - May 2022</i></h5>
       <ul>
         <li>Lead the rebuild of <a
           href="https://www.biggreenegg.co.uk/"
@@ -67,7 +67,7 @@ export default [
     },
     role: 'Senior Javascript Engineer',
     content: `
-      <h6><i>Sep 2020 - Dec 2020</i></h6>
+      <h5><i>Sep 2020 - Jan 2021</i></h5>
       <ul>
         <li>Contributed towards the Chilly's Bottles Series 2 website rebuild with Nuxt, VueJS, PostCSS, DatoCMS and Commerce Layer.</li>
         <li>Mentored developers in feature development, code reviews and helping them approach problems from different angles.</li>
@@ -82,7 +82,7 @@ export default [
     },
     role: 'Full Stack Developer',
     content: `
-    <h6><i>Aug 2018 - Sep 2020</i></h6>
+    <h5><i>Aug 2018 - Sep 2020</i></h5>
     <p>I have worked with many clients including
       <a
         href="https://whirli.com/"
@@ -141,7 +141,7 @@ export default [
     },
     role: 'Front-End Engineer',
     content: `
-    <h6><i>June 2016 - Aug 2018</i></h6>
+    <h5><i>June 2016 - Aug 2018</i></h5>
     <p>
       I was at The Economist for 2 years using a number of new technologies, including ReactJS, NodeJS, GraphQL,
       Relay, Redux, Jest, Mocha, Chai and Enzyme.

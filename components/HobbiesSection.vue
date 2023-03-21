@@ -3,7 +3,7 @@
     id="hobbies"
     ref="hobbies"
     tag="section"
-    class="Hobbies section bg-transparent relative"
+    class="section bg-transparent relative"
   >
     <h2 class="t-h2 text-center col-span-full">
       Hobbies

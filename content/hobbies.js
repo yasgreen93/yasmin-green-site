@@ -11,7 +11,7 @@ export default [
           rel="noopener noreferrer"
           class="ELink"
           aria-label="Ravelry site"
-        >here</a>!</p>
+        >here</a>.</p>
     `
   },
   {
@@ -24,6 +24,6 @@ export default [
   },
   {
     title: 'Music',
-    content: '<p>Have played piano since I was young and have taught myself guitar. I also occasionally dabble in making my own instrumental music!</p>'
+    content: '<p>Have played piano since I was young and have taught myself guitar. I also occasionally dabble in making my own instrumental music.</p>'
   }
 ]

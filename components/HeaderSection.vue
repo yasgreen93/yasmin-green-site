@@ -12,7 +12,7 @@
 
       <transition name="fade-up-delay" appear>
         <p v-if="showContent" class="Header__intro-txt t-h3">
-          Forensic Scientist turned Software Engineer in Vancouver, BC.
+          Forensic Scientist turned Software Engineer in Vancouver, BC
         </p>
       </transition>
     </div>
